@@ -1,3 +1,4 @@
 # dallmo-yaml
 
-- a yaml file reader based on js-yaml
+- a simple yaml file reader
+- re-written to base only on deno standard libraries
