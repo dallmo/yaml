@@ -2,6 +2,14 @@
 import { yaml_parse } from "./deps.ts";
 
 ////////////////////////////////////////////////////////////////////////////////
+/*
+ * 
+ * a simple yaml reader based on deno standard library.
+ *
+ * @function dallmo_yaml
+ * @param {string} config_file - the yaml file to read
+ * @returns {Object} - return the result in the form of json object
+ */
 async function dallmo_yaml( config_file: string ){
   
   // read file content from config file

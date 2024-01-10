@@ -15,7 +15,8 @@ all of deno standard library.
 ## usage
 
 ```
-import { dallmo_yaml } from "[path to]/mod.ts";
+// this assumes the latest version
+import { dallmo_yaml } from "https://deno.land/x/dallmo_yaml/mod.ts";
 
 const config_file = "config.yaml";
 const config_obj = await dallmo_yaml( config_file );
