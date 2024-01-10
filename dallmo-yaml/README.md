@@ -3,6 +3,7 @@
 - a simple yaml file reader
 - re-written to base only on deno standard libraries
 
+
 ## dependencies
 
 all of deno standard library.
@@ -20,6 +21,7 @@ const config_file = "config.yaml";
 const config_obj = await dallmo_yaml( config_file );
   console.log( config_obj );
 ```
+
 
 ## test
 to run test codes : 
