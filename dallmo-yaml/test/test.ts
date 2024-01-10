@@ -1,5 +1,5 @@
 // deno test methods
-import { assertEquals } from "https://deno.land/std@0.201.0/assert/mod.ts";
+import { assertEquals } from "../deps.ts";
 
 // the module to be tested
 import { dallmo_yaml } from "../mod.ts";
@@ -15,11 +15,21 @@ import { dallmo_yaml } from "../mod.ts";
  * 
  */
 
+interface Conf_inner {
+  ok1: string;
+  ok2: string;
+  ok3: string;
+};
+
+interface Conf {
+  ok: Conf_inner;
+};
+
 // Compact form: name and function
 Deno.test("#1 read config", async () => {
 
   // read and parse the config file
-  const config_file: any = "./config.yaml";
+  const config_file: string = "./config.yaml";
   const config_obj: any = await dallmo_yaml( config_file );
 
   assertEquals( config_obj.ok.ok1, 111 );

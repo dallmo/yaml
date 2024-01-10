@@ -1,8 +1,8 @@
-// only use the standard module library maintained by the deno team
-import { parse as yaml_parse } from "https://deno.land/std@0.201.0/yaml/mod.ts";
+
+import { yaml_parse } from "./deps.ts";
 
 ////////////////////////////////////////////////////////////////////////////////
-async function dallmo_yaml( config_file ){
+async function dallmo_yaml( config_file: string ){
   
   // read file content from config file
   const file_content = await Deno.readTextFile( config_file );
@@ -18,4 +18,5 @@ export {
   
   dallmo_yaml
 
-};
+}; // export
+
