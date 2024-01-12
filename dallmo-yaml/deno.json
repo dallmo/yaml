@@ -1,7 +1,0 @@
-{
-  "tasks": {
-    "dev": "deno run --watch app.ts",
-    "update-cache": "deno cache --reload --lock-write deps.ts",
-    "test": "cd ./test; deno test --allow-read"
-  }
-}
