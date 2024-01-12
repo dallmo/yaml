@@ -9,31 +9,42 @@ import { dallmo_yaml } from "../mod.ts";
  *  should be :
  * 
  * ok:
- *  ok1: 111
- *  ok2: 222
- *  ok3: 333
+ *  ok1: 111     // number
+ *  ok2: "abc"   // ascii string
+ *  ok3: "abc def"   // ascii string with space
+ *  ok4: 真係得？ // UTF-8 string
  * 
  */
 
-interface Conf_inner {
-  ok1: string;
-  ok2: string;
-  ok3: string;
-};
-
-interface Conf {
-  ok: Conf_inner;
-};
-
 // Compact form: name and function
-Deno.test("#1 read config", async () => {
+Deno.test("test dallmo_yaml", async (t) => {
 
   // read and parse the config file
   const config_file: string = "./config.yaml";
   const config_obj: any = await dallmo_yaml( config_file );
 
-  assertEquals( config_obj.ok.ok1, 111 );
-  assertEquals( config_obj.ok.ok2, 222 );
-  assertEquals( config_obj.ok.ok3, 333 );
-  
+  console.log( "config_obj : ", config_obj );
+
+  //---------------------------------------------------------
+  await t.step("step : test number", async () => {
+    assertEquals( config_obj.ok.ok1, 111 );
+  }); // step
+  //................................
+  await t.step("step : test ascii string, no space", async () => {
+    assertEquals( config_obj.ok.ok2, "abc" );
+  }); // step
+  //................................
+  await t.step("step : test ascii string, with space", async () => {
+    assertEquals( config_obj.ok.ok3, "abc def" );
+  }); // step
+  //................................
+  await t.step("step : test UTF-8 string", async () => {
+    assertEquals( config_obj.ok.ok4, "真係得？" );
+  }); // step
+  //................................
+  await t.step("step : test array", async () => {
+    assertEquals( config_obj.array_1, [ 123, "abc"] );
+  }); // step
+  //---------------------------------------------------------
+
 }); // deno test
