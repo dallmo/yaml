@@ -37,5 +37,3 @@ or :
 1. switch to the folder `[root]/test` ; 
 1. run `deno test --allow-read` ; 
 
-
-

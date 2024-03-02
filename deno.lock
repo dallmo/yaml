@@ -1,5 +1,26 @@
 {
   "version": "3",
+  "packages": {
+    "specifiers": {
+      "jsr:@std/assert@^0.218.2": "jsr:@std/assert@0.218.2",
+      "jsr:@std/fmt@^0.218.2": "jsr:@std/fmt@0.218.2",
+      "jsr:@std/yaml@^0.218.2": "jsr:@std/yaml@0.218.2"
+    },
+    "jsr": {
+      "@std/assert@0.218.2": {
+        "integrity": "7f0a5a1a8cf86607cd6c2c030584096e1ffad27fc9271429a8cb48cfbdee5eaf",
+        "dependencies": [
+          "jsr:@std/fmt@^0.218.2"
+        ]
+      },
+      "@std/fmt@0.218.2": {
+        "integrity": "99526449d2505aa758b6cbef81e7dd471d8b28ec0dcb1491d122b284c548788a"
+      },
+      "@std/yaml@0.218.2": {
+        "integrity": "82278eb3ce7491e2c3280d926973a8c3f71d25dd3f187c133b33f5c83ea17a5a"
+      }
+    }
+  },
   "redirects": {
     "https://deno.land/std/assert/mod.ts": "https://deno.land/std@0.218.2/assert/mod.ts",
     "https://deno.land/std/yaml/mod.ts": "https://deno.land/std@0.218.2/yaml/mod.ts"
@@ -73,5 +94,11 @@
     "https://deno.land/std@0.218.2/yaml/schema/mod.ts": "9bf7ff80c2a246f781bdcab979211d0389760831a974cf5883bf2016567e3507",
     "https://deno.land/std@0.218.2/yaml/stringify.ts": "580f8b2fa56e3233424520d8242f4fc0edf41ac54a6a6d2f6f8e0b6e99cd63c0",
     "https://deno.land/std@0.218.2/yaml/type.ts": "708dde5f20b01cc1096489b7155b6af79a217d585afb841128e78c3c2391eb5c"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@^0.218.2",
+      "jsr:@std/yaml@^0.218.2"
+    ]
   }
 }
