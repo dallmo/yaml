@@ -1,0 +1,11 @@
+---
+#--------------- with comment lines
+ok:
+  ok1: 111
+  ok2: abc
+  ok3: abc def
+  ok4: 真係得？
+#--------------- with comment lines
+array_1:
+  - 123
+  - abc

@@ -1,26 +1,41 @@
-# this repo is obsoleted. 
+# overview
 
-and migrated to : https://github.com/dallmo/deno-dallmo-util-yaml
+- a simple yaml file reader
+- re-written in typescript, migrated from nodejs to base only on deno standard libraries
+- published to deno land in : https://deno.land/x/dallmo_util_yaml
 
-currently the deno module is published in : https://deno.land/x/dallmo_util_yaml
+## dependencies
 
----
+all of deno standard library.
 
-## background info
-
-this module was publised initially via the repo :
-- https://github.com/dallmo/deno-modules
-
-
-then tried switching to another repo for naming consistency ( and avoid a monorepo ) :
-- https://github.com/dallmo/deno-dallmo-yaml
+- `Deno.readTextFile`
+- https://deno.land/std/yaml
 
 
-but even emailed to modules@deno.com for the request, there is no response / reply for more than a few days.
-- [related stakeoverflow thread here](https://stackoverflow.com/questions/72914966/how-to-change-the-associated-github-repository-after-publishing-a-module-to-deno)
+## usage
+
+```
+// this assumes the latest version
+import { dallmo_util_yaml } from "https://deno.land/x/dallmo_util_yaml/mod.ts";
+
+const config_file = "config.yaml";
+const config_obj = await dallmo_util_yaml( config_file );
+  console.log( config_obj );
+```
 
 
-so instead of keeping waiting with no concrete schedule, both of the above repos will be obsoleted, and finally it would now be grouped under dallmo_util, or can be accessed directly as dallmo_util_yaml.
+## test
+to run test codes : 
+
+either : 
+
+1. stay in the project root folder, i.e. `[root]/` ;
+1. run `deno task test` ; 
+
+or : 
+
+1. switch to the folder `[root]/test` ; 
+1. run `deno test --allow-read` ; 
 
 
 
