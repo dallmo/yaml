@@ -14,11 +14,6 @@ jobs:
       id-token: write # The OIDC ID token is used for authentication with JSR.
     steps:
       - uses: actions/checkout@v4
-      - name: copy deps.jsr.ts as deps.ts in etc/
-        run: |
-          cd "${GITHUB_WORKSPACE}/etc"
-          rm -f deps.ts
-          cp deps.jsr.ts deps.ts
       - run: npx jsr publish
 
 
