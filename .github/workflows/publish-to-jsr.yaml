@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: copy deps.jsr.ts as deps.ts in etc/
         run: |
-          cd etc
+          cd "${GITHUB_WORKSPACE}/etc"
           rm -f deps.ts
           cp deps.jsr.ts deps.ts
       - uses: actions/checkout@v4
