@@ -1,7 +1,7 @@
 {
   "name": "@dallmo/yaml",
   "description": "this package had been migrated to @dallmo/util-yaml",
-  "version": "2024-03-03.01",
+  "version": "2024.03.03.01",
   "tasks": {
     "run": "deno run app.ts"
   },
