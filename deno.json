@@ -1,9 +1,6 @@
 {
   "name": "@dallmo/yaml",
-  "description": "this package had been migrated to @dallmo/util-yaml",
-  "version": "1.5.2",
-  "tasks": {
-    "run": "deno run app.ts"
-  },
+  "description": "this package is obsoleted and had been migrated to @dallmo/util-yaml",
+  "version": "1.5.3",
   "exports": "./mod.ts"
 }
