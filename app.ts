@@ -1,12 +1,13 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 /**
- * this module is obsoleted and migrated to @dallmo/util-yaml
- * @param {undefined}
+ * show migrated message
+ * ---------------------
+ * @function dallmo_yaml
  * @return {void}
  */
 function dallmo_yaml(): void {
-  console.log("this module is obsoleted and migrated to @dallmo/util-yaml.");
+  console.error("this module is obsoleted and had been migrated to @dallmo/util-yaml.");
 }; // function
 ////////////////////////////////////////////////////////////////////////////////
 export {
