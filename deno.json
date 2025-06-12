@@ -1,6 +1,6 @@
 {
   "name": "@dallmo/yaml",
   "description": "this package is obsoleted and had been migrated to @dallmo/util-yaml",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "exports": "./mod.ts"
 }
